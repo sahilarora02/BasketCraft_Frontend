@@ -77,7 +77,7 @@ export default function SignUpPage() {
     };
     try {
       const resp = await fetch(
-        "http://localhost:3002/sendMail",
+        "https://basketcrafts.herokuapp.com/sendMail",
         requestOptions
       );
       if (resp.status === 200) {
