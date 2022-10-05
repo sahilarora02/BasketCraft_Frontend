@@ -67,23 +67,44 @@ export const Login = () => {
         console.log(resp);
         if (resp.status === 404) {
 
-            setMsg("User Does Not Exist")
-            setSeverity("info")
-          
+            
+            Store.addNotification({
+              title: "Waitt!",
+              message: "User Does Not Exist",
+              type: "info",
+              insert: "top",
+              container: "top-right",
+              animationIn: ["animate__animated", "animate__fadeIn"],
+              animationOut: ["animate__animated", "animate__fadeOut"],
+              dismiss: {
+                duration: 1500,
+                onScreen: true
+              }
+            });
         } else if (resp.status === 401) {
-
-          setMsg("Wrong Email and Password")
-          setSeverity("warning")
+          Store.addNotification({
+            title: "Wait!",
+            message: "Wrong Email and Password",
+            type: "warning",
+            insert: "top",
+            container: "top-right",
+            animationIn: ["animate__animated", "animate__fadeIn"],
+            animationOut: ["animate__animated", "animate__fadeOut"],
+            dismiss: {
+              duration: 1500,
+              onScreen: true
+            }
+          });
+      
       
         } else if (resp.status === 200) {
-          setMsg("")
-          setSeverity("")
+        
           Store.addNotification({
             title: "Yayy!",
             message: "Login Successfull",
             type: "success",
-            insert: "bottom",
-            container: "bottom-right",
+            insert: "top",
+            container: "top-right",
             animationIn: ["animate__animated", "animate__fadeIn"],
             animationOut: ["animate__animated", "animate__fadeOut"],
             dismiss: {
@@ -102,21 +123,20 @@ export const Login = () => {
       });
     } catch (err) {
       console.log("Err ", err);
-      setMsg("Error Occured")
-      setSeverity("error")
-      // Store.addNotification({
-      //   title: "OOPs!",
-      //   message: "Error Occured",
-      //   type: "danger",
-      //   insert: "bottom",
-      //   container: "bottom-left",
-      //   animationIn: ["animate__animated", "animate__fadeIn"],
-      //   animationOut: ["animate__animated", "animate__fadeOut"],
-      //   dismiss: {
-      //     duration: 1500,
-      //     onScreen: true
-      //   }
-      // });
+     
+      Store.addNotification({
+        title: "OOPs!",
+        message: "Error Occured",
+        type: "danger",
+        insert: "top",
+        container: "top-right",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 1500,
+          onScreen: true
+        }
+      });
     }
   };
   return (
@@ -197,11 +217,11 @@ export const Login = () => {
           Login
         </Button>
       </div>
-     {msg && <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+     {/* {msg && <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity={severity} sx={{ width: '100%' }}>
           {msg}
         </Alert>
-      </Snackbar>}
+      </Snackbar>} */}
     </div>
   );
 };

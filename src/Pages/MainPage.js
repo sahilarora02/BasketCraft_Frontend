@@ -102,8 +102,8 @@ export default function MainPage(props) {
           title: "OOPs!",
           message: "Error occured",
           type: "danger",
-          insert: "bottom",
-          container: "bottom-left",
+          insert: "top",
+          container: "top-right",
           animationIn: ["animate__animated", "animate__fadeIn"],
           animationOut: ["animate__animated", "animate__fadeOut"],
           dismiss: {
@@ -118,7 +118,7 @@ export default function MainPage(props) {
         message: "Please Login First  ",
         type: "warning",
         insert: "top",
-        container: "top-left",
+        container: "top-right",
         animationIn: ["animate__animated", "animate__fadeIn"],
         animationOut: ["animate__animated", "animate__fadeOut"],
         dismiss: {

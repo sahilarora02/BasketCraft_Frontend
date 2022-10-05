@@ -80,7 +80,7 @@ useEffect(()=>{
             message: "Already Added to your Cart",
             type: "info",
             insert: "top",
-            container: "top-left",
+            container: "top-right",
             animationIn: ["animate__animated", "animate__fadeIn"],
             animationOut: ["animate__animated", "animate__fadeOut"],
             dismiss: {
@@ -97,7 +97,7 @@ useEffect(()=>{
             message: "Succesfully Added",
             type: "success",
             insert: "top",
-            container: "top-left",
+            container: "top-right",
             animationIn: ["animate__animated", "animate__fadeIn"],
             animationOut: ["animate__animated", "animate__fadeOut"],
             dismiss: {
@@ -114,7 +114,7 @@ useEffect(()=>{
           message: "Error Occured",
           type: "danger",
           insert: "top",
-          container: "top-left",
+          container: "top-right",
           animationIn: ["animate__animated", "animate__fadeIn"],
           animationOut: ["animate__animated", "animate__fadeOut"],
           dismiss: {
@@ -130,7 +130,7 @@ useEffect(()=>{
         message: "Please Login First",
         type: "warning",
         insert: "top",
-        container: "top-left",
+        container: "top-right",
         animationIn: ["animate__animated", "animate__fadeIn"],
         animationOut: ["animate__animated", "animate__fadeOut"],
         dismiss: {

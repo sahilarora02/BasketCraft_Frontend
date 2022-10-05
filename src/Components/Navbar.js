@@ -208,8 +208,8 @@ const handlerDeleteCart = async()=>{
         title: "OOPs!",
         message: "Error occured",
         type: "danger",
-        insert: "bottom",
-        container: "bottom-left",
+        insert: "top",
+        container: "top-right",
         animationIn: ["animate__animated", "animate__fadeIn"],
         animationOut: ["animate__animated", "animate__fadeOut"],
         dismiss: {

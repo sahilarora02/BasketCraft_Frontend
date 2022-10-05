@@ -102,8 +102,8 @@ export default function SignUpPage() {
         title: "Oops!",
         message: "Error Occured",
         type: "danger",
-        insert: "bottom",
-        container: "bottom-left",
+        insert: "top",
+        container: "top-right",
         animationIn: ["animate__animated", "animate__fadeIn"],
         animationOut: ["animate__animated", "animate__fadeOut"],
         dismiss: {
@@ -140,8 +140,8 @@ export default function SignUpPage() {
           title: "Oops!",
           message: "Already Registered",
           type: "warning",
-          insert: "bottom",
-          container: "bottom-left",
+          insert: "top",
+          container: "top-right",
           animationIn: ["animate__animated", "animate__fadeIn"],
           animationOut: ["animate__animated", "animate__fadeOut"],
           dismiss: {
@@ -155,8 +155,8 @@ export default function SignUpPage() {
           title: "Oops!",
           message: "Invalid Otp",
           type: "warning",
-          insert: "bottom",
-          container: "bottom-left",
+          insert: "top",
+          container: "top-right",
           animationIn: ["animate__animated", "animate__fadeIn"],
           animationOut: ["animate__animated", "animate__fadeOut"],
           dismiss: {
@@ -190,8 +190,8 @@ export default function SignUpPage() {
         title: "Oops!",
         message: "Error Occured",
         type: "danger",
-        insert: "bottom",
-        container: "bottom-left",
+        insert: "top",
+        container: "top-right",
         animationIn: ["animate__animated", "animate__fadeIn"],
         animationOut: ["animate__animated", "animate__fadeOut"],
         dismiss: {
