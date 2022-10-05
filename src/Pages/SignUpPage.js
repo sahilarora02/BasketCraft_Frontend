@@ -132,7 +132,7 @@ export default function SignUpPage() {
     try {
       console.log("hiiii");
       const resp = await fetch(
-        "http://localhost:3002/Register",
+        "https://basketcrafts.herokuapp.com/Register",
         requestOptions
       );
       if (resp.status === 300) {

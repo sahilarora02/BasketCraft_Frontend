@@ -32,7 +32,7 @@ export default function Cart(props) {
 
     try {
       const resp = await fetch(
-        `http://localhost:3002/DeleteItemFromCart/${prodId}`,
+        `https://basketcrafts.herokuapp.com/DeleteItemFromCart/${prodId}`,
         requestOptions
       );
       if (resp.status == 200) {
@@ -49,7 +49,7 @@ export default function Cart(props) {
             onScreen: true,
           },
         });
-       await fetch(`http://localhost:3002/GetYourCart/${userId}`)
+       await fetch(`https://basketcrafts.herokuapp.com/GetYourCart/${userId}`)
         .then((resp) => resp.json())
         .then((resp) => setCart(resp));
         // window.location.reload();
@@ -76,7 +76,7 @@ export default function Cart(props) {
   console.log("userId=>", userId);
   useEffect(() => {
     try {
-      fetch(`http://localhost:3002/GetYourCart/${userId}`)
+      fetch(`https://basketcrafts.herokuapp.com/GetYourCart/${userId}`)
         .then((resp) => resp.json())
         .then((resp) => setCart(resp));
     } catch (err) {

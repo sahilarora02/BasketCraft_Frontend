@@ -46,7 +46,7 @@ export default function Navbar(props) {
 
   useEffect(() => {
     try {
-      fetch(`http://localhost:3002/TotalCartItems/${userId}`)
+      fetch(`https://basketcrafts.herokuapp.com/TotalCartItems/${userId}`)
         .then((resp) => resp.json())
         .then((resp) => setCartItem(resp));
       console.log("cartItem = >", cartItem);
@@ -66,15 +66,15 @@ const handlerDeleteCart = async()=>{
 
   try {
     const resp = await fetch(
-      `http://localhost:3002/DeleteCart/${userId}`,
+      `https://basketcrafts.herokuapp.com/DeleteCart/${userId}`,
       requestOptions
     );
     if (resp.status == 200) {
-    fetch(`http://localhost:3002/GetYourCart/${userId}`)
+    fetch(`https://basketcrafts.herokuapp.com/GetYourCart/${userId}`)
     .then((resp) => resp.json())
     .then((resp) => setCart(resp));
       
-    fetch(`http://localhost:3002/TotalCartItems/${userId}`)
+    fetch(`https://basketcrafts.herokuapp.com2/TotalCartItems/${userId}`)
     .then((resp) => resp.json())
     .then((resp) => setCartItem(resp));
     }
@@ -98,7 +98,7 @@ const handlerDeleteCart = async()=>{
 
     try {
       const resp = await fetch(
-        `http://localhost:3002/CheckOut`,
+        `https://basketcrafts.herokuapp.com/CheckOut`,
         requestOptions
       );
       if (resp.status == 200) {
@@ -158,7 +158,7 @@ const handlerDeleteCart = async()=>{
   console.log("cart=>", cart);
   useEffect(() => {
     try {
-      fetch(`http://localhost:3002/GetYourCart/${userId}`)
+      fetch(`https://basketcrafts.herokuapp.com/GetYourCart/${userId}`)
         .then((resp) => resp.json())
         .then((resp) => setCart(resp));
 
@@ -176,7 +176,7 @@ const handlerDeleteCart = async()=>{
 
     try {
       const resp = await fetch(
-        `http://localhost:3002/DeleteItemFromCart/${prodId}`,
+        `https://basketcrafts.herokuapp.com/DeleteItemFromCart/${prodId}`,
         requestOptions
       );
       if (resp.status == 200) {
@@ -193,11 +193,11 @@ const handlerDeleteCart = async()=>{
             onScreen: true,
           },
         });
-        fetch(`http://localhost:3002/GetYourCart/${userId}`)
+        fetch(`https://basketcrafts.herokuapp.com/GetYourCart/${userId}`)
           .then((resp) => resp.json())
           .then((resp) => setCart(resp));
 
-          fetch(`http://localhost:3002/TotalCartItems/${userId}`)
+          fetch(`https://basketcrafts.herokuapp.com/TotalCartItems/${userId}`)
           .then((resp) => resp.json())
           .then((resp) => setCartItem(resp));
         // window.location.reload();

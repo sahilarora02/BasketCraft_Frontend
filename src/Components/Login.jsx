@@ -61,7 +61,7 @@ export const Login = () => {
       body: JSON.stringify(body),
     };
     try {
-      const resp = await fetch("http://localhost:3002/Login", requestOptions);
+      const resp = await fetch("https://basketcrafts.herokuapp.com/Login", requestOptions);
       resp.json().then((data) => {
         console.log(resp.status);
         console.log(resp);

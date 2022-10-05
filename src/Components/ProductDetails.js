@@ -70,7 +70,7 @@ const userId = localStorage.getItem("id");
       };
       try {
         const resp = await fetch(
-          "http://localhost:3002/AddtoCart",
+          "https://basketcrafts.herokuapp.com/AddtoCart",
           requestOptions
         );
         if (resp.status == 300) {

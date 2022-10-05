@@ -10,7 +10,7 @@ export default function OrderHistory() {
   const userId = localStorage.getItem("id");
   useEffect(() => {
     try {
-      fetch(`http://localhost:3002/GetOrderedList/${userId}`)
+      fetch(`https://basketcrafts.herokuapp.com/GetOrderedList/${userId}`)
         .then((resp) => resp.json())
         .then((resp) => setOrderedList(resp));
     } catch (err) {
